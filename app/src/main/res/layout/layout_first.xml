@@ -1,33 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tvMainAct"
+        android:id="@+id/tvFirstAct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
-        android:text="Home Screen"
+        android:text="Hello"
         android:textColor="@color/purple_500" />
 
     <Button
-        android:id="@+id/btnGotoIntent"
+        android:id="@+id/btnFirstAct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/tvFirstAct"
         android:layout_marginLeft="@dimen/btn_margin"
-        android:layout_marginTop="@dimen/btn_margin"
         android:layout_marginRight="@dimen/btn_margin"
         android:layout_marginBottom="@dimen/btn_margin"
         android:gravity="center"
-        android:text="GOTO Intent"
+        android:text="GOTO SECOND ACT"
         android:textColor="@color/white" />
+
 
 </RelativeLayout>
