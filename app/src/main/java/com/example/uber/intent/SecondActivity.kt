@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.uber.R
+import com.example.uber.uberapp.UberContants
 
 class SecondActivity : AppCompatActivity() {
 
@@ -25,6 +26,9 @@ class SecondActivity : AppCompatActivity() {
         tvSecondActivity = findViewById(R.id.tvSecondAct) as TextView
 
         tvSecondActivity?.setText("We are in Second Activity")
+
+        var name: String? = intent.getStringExtra(UberContants.LOGGED_IN_USER_KEY)
+        Log.e("received name ", name.toString())
 
         btnSecondActivity?.setOnClickListener(View.OnClickListener {
             gotoFirstAct()

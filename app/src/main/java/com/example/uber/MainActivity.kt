@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
 
     var btnGotoIntent: Button? = null
 
+    //why ?/!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,9 +24,9 @@ class MainActivity : AppCompatActivity() {
 
         btnGotoIntent = findViewById(R.id.btnGotoIntent) as Button
 
-        btnGotoIntent?.setOnClickListener(View.OnClickListener {
+        btnGotoIntent!!.setOnClickListener(View.OnClickListener {
 
-            var gotoFirstAct = Intent(MainActivity@this, FirstActivity::class.java)
+            var gotoFirstAct = Intent(MainActivity@ this, FirstActivity::class.java)
             startActivity(gotoFirstAct)
         })
     }

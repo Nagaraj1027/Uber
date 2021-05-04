@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.uber.R
+import com.example.uber.uberapp.UberContants
 
 class FirstActivity : AppCompatActivity() {
 
@@ -19,7 +20,7 @@ class FirstActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_first)
 
-        Log.e("onCreate FirstAct ","onCreate FirstAct ")
+        Log.e("onCreate FirstAct ", "onCreate FirstAct ")
 
         btnFirstAct = findViewById(R.id.btnFirstAct) as Button
         tvFirstAct = findViewById(R.id.tvFirstAct) as TextView
@@ -34,38 +35,39 @@ class FirstActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.e("onStart FirstAct ","onStart FirstAct ")
+        Log.e("onStart FirstAct ", "onStart FirstAct ")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.e("onResume FirstAct ","onResume FirstAct ")
+        Log.e("onResume FirstAct ", "onResume FirstAct ")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.e("onPause FirstAct ","onPause FirstAct ")
+        Log.e("onPause FirstAct ", "onPause FirstAct ")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.e("onStop FirstAct ","onStop FirstAct ")
+        Log.e("onStop FirstAct ", "onStop FirstAct ")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.e("onRestart FirstAct ","onRestart FirstAct ")
+        Log.e("onRestart FirstAct ", "onRestart FirstAct ")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.e("onDestroy FirstAct ","onDestroy FirstAct ")
+        Log.e("onDestroy FirstAct ", "onDestroy FirstAct ")
     }
 
 
     fun gotoSecondAct() {
         // businesss logic
         var gotoSecondAct = Intent(FirstActivity@ this, SecondActivity::class.java)
+        gotoSecondAct.putExtra(UberContants.LOGGED_IN_USER_KEY, UberContants.LOGGED_IN_USER_VALUE)
         startActivity(gotoSecondAct)
     }
 
