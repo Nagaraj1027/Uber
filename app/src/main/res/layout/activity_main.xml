@@ -13,21 +13,30 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:text="Home Screen"
         android:textColor="@color/purple_500" />
 
     <Button
         android:id="@+id/btnGotoIntent"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/tvMainAct"
         android:layout_marginLeft="@dimen/btn_margin"
-        android:layout_marginTop="@dimen/btn_margin"
+        android:layout_marginRight="@dimen/btn_margin"
+        android:layout_marginBottom="10dp"
+        android:text="GOTO Intent"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnGotoImplicitIntent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnGotoIntent"
+        android:layout_marginLeft="@dimen/btn_margin"
         android:layout_marginRight="@dimen/btn_margin"
         android:layout_marginBottom="@dimen/btn_margin"
-        android:gravity="center"
-        android:text="GOTO Intent"
+        android:text="GOTO Implicit Intent"
         android:textColor="@color/white" />
 
 </RelativeLayout>
