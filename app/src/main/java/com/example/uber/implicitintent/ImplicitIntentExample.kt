@@ -26,7 +26,7 @@ class ImplicitIntentExample : AppCompatActivity() {
 
         btnImplicitIntent!!.setOnClickListener(View.OnClickListener {
 
-            var gotoImplicitIntent= Intent(Intent.ACTION_VIEW)
+            var gotoImplicitIntent = Intent(Intent.ACTION_VIEW)
             gotoImplicitIntent.data = Uri.parse("http://www.google.com")
             startActivity(gotoImplicitIntent)
         })
