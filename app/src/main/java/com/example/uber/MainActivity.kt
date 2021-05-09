@@ -19,9 +19,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     //why ?/!!
 
-    //!!
-    //?
+    //? : As kotlin is null safe language. so when we initialize a string or any data type in kotlin, it does not take null.
+    // for example: var a: String= null ; will throw compilation error
+    // so inorder to enable the variable to take null, we use ?.
 
+    //!! : the not-null assertion operator (!!) converts any value to a non-null type and throws an exception if the value is null.
+
+/*
+    a: String? |           a.length |           a?.length |           a!!.length |
+    +------------+--------------------+---------------------+----------------------+
+    |      "cat" | Compile time error |                   3 |                    3 |
+    |       null | Compile time error |                null | NullPointerException |
+
+*/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
