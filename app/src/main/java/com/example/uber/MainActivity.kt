@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     var btnGotoIntent: Button? = null
     var btnGotoImplicitIntent: Button? = null
-
+    var btnGotoFragemnts: Button? = null
     //why ?/!!
 
     //!!
@@ -37,10 +37,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         btnGotoIntent = findViewById(R.id.btnGotoIntent) as Button
         btnGotoImplicitIntent = findViewById(R.id.btnGotoImplicitIntent) as Button
+        btnGotoFragemnts = findViewById(R.id.btnGotoFragemnts) as Button
 
 
         btnGotoIntent!!.setOnClickListener(this)
         btnGotoImplicitIntent!!.setOnClickListener(this)
+        btnGotoFragemnts!!.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -52,6 +54,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
             R.id.btnGotoImplicitIntent ->
                 gotoImplicitIntent()
+
+            R.id.btnGotoFragemnts ->
+                gotoFragments()
         }
 
     }
@@ -62,6 +67,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun gotoImplicitIntent() {
+        var gotoFirstAct = Intent(MainActivity@ this, ImplicitIntentExample::class.java)
+        startActivity(gotoFirstAct)
+    }
+
+    fun gotoFragments() {
         var gotoFirstAct = Intent(MainActivity@ this, ImplicitIntentExample::class.java)
         startActivity(gotoFirstAct)
     }
