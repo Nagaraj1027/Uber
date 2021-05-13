@@ -35,7 +35,7 @@
         android:layout_below="@+id/btnGotoIntent"
         android:layout_marginLeft="@dimen/btn_margin"
         android:layout_marginRight="@dimen/btn_margin"
-        android:layout_marginBottom="@dimen/btn_margin"
+        android:layout_marginBottom="10dp"
         android:text="GOTO Implicit Intent"
         android:textColor="@color/white" />
 

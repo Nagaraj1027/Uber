@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.uber.fragments.FragmentsAactivity
 import com.example.uber.implicitintent.ImplicitIntentExample
 import com.example.uber.intent.FirstActivity
 
@@ -82,7 +83,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun gotoFragments() {
-        var gotoFirstAct = Intent(MainActivity@ this, ImplicitIntentExample::class.java)
+        var gotoFirstAct = Intent(MainActivity@ this, FragmentsAactivity::class.java)
         startActivity(gotoFirstAct)
     }
 }

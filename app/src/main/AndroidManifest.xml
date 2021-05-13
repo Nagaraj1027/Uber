@@ -27,6 +27,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".implicitintent.ImplicitIntentExample" />
         <activity android:name=".login.LoginActivity" />
+        <activity android:name=".fragments.FragmentsAactivity" />
     </application>
 
 </manifest>
