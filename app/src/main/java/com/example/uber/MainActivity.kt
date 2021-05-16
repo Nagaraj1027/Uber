@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.uber.fragments.FragmentsAactivity
+import com.example.uber.fragmentswithviewpager.DynamicFragmntsActivity
 import com.example.uber.implicitintent.ImplicitIntentExample
 import com.example.uber.intent.FirstActivity
 
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     var btnGotoIntent: Button? = null
     var btnGotoImplicitIntent: Button? = null
     var btnGotoFragemnts: Button? = null
+    var btnGotoDynamicFragemnts: Button? = null
+
     //why ?/!!
 
     //? : As kotlin is null safe language. so when we initialize a string or any data type in kotlin, it does not take null.
@@ -49,11 +52,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnGotoIntent = findViewById(R.id.btnGotoIntent) as Button
         btnGotoImplicitIntent = findViewById(R.id.btnGotoImplicitIntent) as Button
         btnGotoFragemnts = findViewById(R.id.btnGotoFragemnts) as Button
+        btnGotoDynamicFragemnts  = findViewById(R.id.btnGotoDynamicFragemnts) as Button
 
 
         btnGotoIntent!!.setOnClickListener(this)
         btnGotoImplicitIntent!!.setOnClickListener(this)
         btnGotoFragemnts!!.setOnClickListener(this)
+        btnGotoDynamicFragemnts!!.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -68,6 +73,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
             R.id.btnGotoFragemnts ->
                 gotoFragments()
+
+            R.id.btnGotoDynamicFragemnts ->
+                gotoDynamicFragments()
         }
 
     }
@@ -84,6 +92,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     fun gotoFragments() {
         var gotoFirstAct = Intent(MainActivity@ this, FragmentsAactivity::class.java)
+        startActivity(gotoFirstAct)
+    }
+
+    fun gotoDynamicFragments() {
+        var gotoFirstAct = Intent(MainActivity@ this, DynamicFragmntsActivity::class.java)
         startActivity(gotoFirstAct)
     }
 }

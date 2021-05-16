@@ -46,8 +46,19 @@
         android:layout_below="@+id/btnGotoImplicitIntent"
         android:layout_marginLeft="@dimen/btn_margin"
         android:layout_marginRight="@dimen/btn_margin"
-        android:layout_marginBottom="@dimen/btn_margin"
+        android:layout_marginBottom="10dp"
         android:text="GOTO FRAGMENTS"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnGotoDynamicFragemnts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnGotoFragemnts"
+        android:layout_marginLeft="@dimen/btn_margin"
+        android:layout_marginRight="@dimen/btn_margin"
+        android:layout_marginBottom="@dimen/btn_margin"
+        android:text="GOTO FRAGMENTS WITH VIEWPAGER"
         android:textColor="@color/white" />
 
 </RelativeLayout>

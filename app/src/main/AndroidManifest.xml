@@ -28,6 +28,7 @@
         <activity android:name=".implicitintent.ImplicitIntentExample" />
         <activity android:name=".login.LoginActivity" />
         <activity android:name=".fragments.FragmentsAactivity" />
+        <activity android:name=".fragmentswithviewpager.DynamicFragmntsActivity" />
     </application>
 
 </manifest>
